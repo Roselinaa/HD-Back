@@ -1,6 +1,7 @@
 from flask import Flask, escape, request, redirect, url_for, render_template
 
 app = Flask(__name__)
+# app._static_folder = <path to to your static directory>
 
 @app.route("/")
 def home():
@@ -12,4 +13,4 @@ def login():
     return render_template("login.html")
 
 if __name__ == "__main__":
-    app.run()
+    app.run(debug=True)
